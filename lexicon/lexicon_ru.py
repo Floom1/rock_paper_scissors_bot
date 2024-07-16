@@ -20,3 +20,8 @@ LEXICON_RU: dict[str, str] = {
     'nobody_won': 'Ничья\nГо ещё?',
     'bot_choice': 'Мой выбор'
 }
+
+LEXICON_COMMANDS_RU: dict[str, str] = {
+    '/start': 'Начать игру',
+    '/help': 'Объяснить игру'
+}

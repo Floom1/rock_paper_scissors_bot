@@ -8,6 +8,7 @@ from aiogram.types import BotCommand
 from config_data.config import Config, load_config
 from handlers import user_handlers
 from handlers import other_handlers
+from keyboards.set_menu import set_main_menu
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,8 @@ async def main():
         default=DefaultBotProperties(parse_mode=ParseMode.HTML)
     )
     dp = Dispatcher()
+
+    await set_main_menu(bot)
 
     dp.include_router(user_handlers.router)
     dp.include_router(other_handlers.router)
